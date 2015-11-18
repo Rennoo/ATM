@@ -1,0 +1,117 @@
+<%= form_for @app do |f| %>
+
+  <% if @app.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@app.errors.count, "error") %> prohibited
+        this app from being saved:
+      </h2>
+      <ul>
+        <% @app.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= f.label 'First name: ' %>
+      <%= f.text_field :fname, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= f.label 'Last name: ' %>
+      <%= f.text_field :lname, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="form-group">
+     <%= f.label "Father's name: " %>
+      <%= f.text_field :father, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="form-group">
+      <%= f.label "Mother's first name: " %>
+      <%= f.text_field :fmother, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="form-group">
+      <%= f.label "Mother's last name: " %>
+      <%= f.text_field :father, class: "form-control" %>
+    </div>
+  </div>
+
+
+  <div class="col-md-4">
+    <div class="form-group">
+      <%= f.label "Nationality: " %>
+      <%= f.text_field :nationality, class: "form-control"%>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= f.label "Date of birth: " %>
+      <%= f.text_field :dob, class: "form-control" %>
+    </div>
+  </div>
+
+    <div class="col-md-6">
+    <div class= "form-group">
+        <%= f.label "gender: " %>
+        <%= f.text_field :dob, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="form-group">
+        <%= f.label "Email: " %>
+        <%= f.text_field :email, class: "form-control" %>
+    </div>
+</div>
+
+  <div class="col-md-6">
+    <div class="form-group">
+        <%= f.label "Phone number: " %>
+        <%= f.text_field :phone, class: "form-control" %>
+    </div>
+ </div>
+
+  <div class="col-md-8">
+    <div class="form-group">
+        <%= f.label "Education: " %>
+      <%= f.text_area :education, class: "form-control" %>
+    </div>
+  </div>
+
+
+  <div class="col-md-8">
+    <div class="form-group">
+        <%= f.label "Skills: " %>
+        <%= f.text_area :skills, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="form-group">
+        <%= f.label "Current status: " %>
+        <%= f.text_field :working, class: "form-control" %>
+    </div>
+       <%= f.submit"Send Application", class: "btn btn-primary"%>
+
+  </div>
+
+
+
+
+
+<% end %>
