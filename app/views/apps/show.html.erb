@@ -1,0 +1,55 @@
+<h2> Application successfully sent </h2>
+first name:
+<%= @app.fname %>
+<br>
+lastname:
+<%= @app.lname %>
+<br>
+<br>
+mother's first name:
+<%= @app.fmother %>
+<br>
+
+
+<br>
+mother's last name:
+<%= @app.lmother %>
+<br>
+
+<br>
+nationality:
+<%= @app.nationality %>
+<br>
+
+<br>
+phone number
+<%= @app.phone %>
+<br>
+
+<br>
+email:
+<%= @app.email %>
+<br>
+
+<br>
+education:
+<%= @app.education %>
+<br>
+
+<br>
+skills:
+<%= @app.skills %>
+<br>
+
+<br>
+category:
+<%= @app.category %><br>
+
+<br>
+date:
+<%= @app.dob.to_formatted_s(:long_ordinal) %><br>
+
+gender:
+<%= @app.gender %></br>
+
+<%= link_to 'New App ', new_app_path %>

@@ -46,29 +46,33 @@
   <div class="col-md-4">
     <div class="form-group">
       <%= f.label "Mother's last name: " %>
-      <%= f.text_field :father, class: "form-control" %>
+      <%= f.text_field :lmother, class: "form-control" %>
     </div>
   </div>
 
 
   <div class="col-md-4">
     <div class="form-group">
-      <%= f.label "Nationality: " %>
-      <%= f.text_field :nationality, class: "form-control"%>
-    </div>
+ <%= f.label "Nationality:" %><br />
+            <select id="nationality" class="form-control">
+              <%App::NATIONALITIES.each do |nationality| %>
+                <option value=""><%=nationality%></option>
+              <% end %>
+            </select>
+          </div>
   </div>
 
   <div class="col-md-6">
     <div class="form-group">
-      <%= f.label "Date of birth: " %>
-      <%= f.text_field :dob, class: "form-control" %>
+      <%= f.label 'Date of birth'%><br/>
+      <%= f.date_field :dob, class: "form-control" %>
     </div>
   </div>
 
     <div class="col-md-6">
     <div class= "form-group">
-        <%= f.label "gender: " %>
-        <%= f.text_field :dob, class: "form-control" %>
+      gender yl3an emmo
+
     </div>
   </div>
 
@@ -102,10 +106,17 @@
   </div>
 
   <div class="col-md-8">
-    <div class="form-group">
-        <%= f.label "Current status: " %>
-        <%= f.text_field :working, class: "form-control" %>
-    </div>
+ <div class="form-group">
+            <%= f.label "Choose a category:" %><br />
+            <select id="main-category" class="form-control">
+              <%App::CATEGORIES.each do |category| %>
+                <option value=""><%=category%></option>
+              <% end %>
+            </select>
+            <input type="text" name="app[category]" id="type_category" placeholder="Custom category" class="form-control">
+          </div>
+  </div>
+
        <%= f.submit"Send Application", class: "btn btn-primary"%>
 
   </div>

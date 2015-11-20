@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118131801) do
+ActiveRecord::Schema.define(version: 20151119193426) do
 
   create_table "apps", force: :cascade do |t|
     t.string   "fname"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20151118131801) do
     t.string   "lmother"
     t.date     "dob"
     t.string   "email"
-    t.integer  "phone"
+    t.string   "phone"
     t.boolean  "gender"
     t.string   "category"
     t.text     "education"

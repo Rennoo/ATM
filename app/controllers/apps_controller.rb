@@ -9,13 +9,11 @@ class AppsController < ApplicationController
   end
 
   def create
-     @app = App.new(post_params)
 
-     if @app.save
+     @app = App.new(app_params)
+
+     @app.save
        redirect_to @app
-     else
-       render 'new'
-     end
   end
 
   def destroy
@@ -28,8 +26,10 @@ class AppsController < ApplicationController
    private
 
   def app_params
-    params.require(:app).permit(:fname,:lname, :father, :fmother, :lmother, :dob, :email, :phone, :gender, :category, :education, :nationality, :skills, :working)
+
+    params.require(:app).permit(:fname, :lname, :father, :fmother, :lmother, :dob, :email, :phone, :gender, :category, :education, :nationality, :skills, :working)
   end
+
 end
 
 
