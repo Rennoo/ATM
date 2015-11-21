@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  begining: 1
+  ending: 1
+  position: MyString
+  work_place: MyString
+  description: MyString
+
+two:
+  begining: 1
+  ending: 1
+  position: MyString
+  work_place: MyString
+  description: MyString

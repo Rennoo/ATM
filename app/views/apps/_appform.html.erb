@@ -17,50 +17,53 @@
 
   <div class="col-md-6">
     <div class="form-group">
-      <%= f.label 'First name: ' %>
+      <%= f.label 'First name ' %>
       <%= f.text_field :fname, class: "form-control" %>
     </div>
   </div>
 
   <div class="col-md-6">
     <div class="form-group">
-      <%= f.label 'Last name: ' %>
+      <%= f.label 'Last name ' %>
       <%= f.text_field :lname, class: "form-control" %>
     </div>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-6">
     <div class="form-group">
-     <%= f.label "Father's name: " %>
-      <%= f.text_field :father, class: "form-control" %>
+     <%= f.label "Father's name " %>
+     <%= f.text_field :father, class: "form-control" %>
     </div>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-6">
     <div class="form-group">
-      <%= f.label "Mother's first name: " %>
+      <%= f.label "Mother's first name " %>
       <%= f.text_field :fmother, class: "form-control" %>
     </div>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-6">
     <div class="form-group">
-      <%= f.label "Mother's last name: " %>
+      <%= f.label "Mother's last name " %>
       <%= f.text_field :lmother, class: "form-control" %>
     </div>
   </div>
 
 
-  <div class="col-md-4">
+  <div class="col-md-6">
     <div class="form-group">
- <%= f.label "Nationality:" %><br />
-            <select id="nationality" class="form-control">
+ <%= f.label "Choose a nationality" %><br />
+            <select  id="nationality" class="form-control">
               <%App::NATIONALITIES.each do |nationality| %>
-                <option value=""><%=nationality%></option>
+                <option value=""><%= nationality %></option>
               <% end %>
             </select>
+
           </div>
   </div>
+
+
 
   <div class="col-md-6">
     <div class="form-group">
@@ -69,55 +72,63 @@
     </div>
   </div>
 
+
     <div class="col-md-6">
-    <div class= "form-group">
-      gender yl3an emmo
+    <div class= "form-group"><br>
+      <%= f.label 'Gender:  ' %><br>
+      <%= f.radio_button :gender, "male" %>
+      <%= f.label :gender, "Male", :value => "male" %>
+       <%= f.radio_button :gender, "female" %>
+      <%= f.label :gender, "Female", :value => "female" %>
 
     </div>
   </div>
-
-  <div class="col-md-6">
+       <div class="col-md-6">
     <div class="form-group">
-        <%= f.label "Email: " %>
+        <%= f.label "Email: " %><br>
         <%= f.text_field :email, class: "form-control" %>
     </div>
 </div>
 
   <div class="col-md-6">
     <div class="form-group">
-        <%= f.label "Phone number: " %>
+        <%= f.label "Phone number: " %><br>
         <%= f.text_field :phone, class: "form-control" %>
     </div>
  </div>
 
-  <div class="col-md-8">
+  <div class="col-md-6">
     <div class="form-group">
-        <%= f.label "Education: " %>
+        <%= f.label "Education: " %><br>
       <%= f.text_area :education, class: "form-control" %>
     </div>
   </div>
 
 
-  <div class="col-md-8">
+  <div class="col-md-6">
     <div class="form-group">
-        <%= f.label "Skills: " %>
+        <%= f.label "Skills: " %><br>
         <%= f.text_area :skills, class: "form-control" %>
     </div>
   </div>
 
-  <div class="col-md-8">
+  <div class="col-md-6">
  <div class="form-group">
             <%= f.label "Choose a category:" %><br />
             <select id="main-category" class="form-control">
               <%App::CATEGORIES.each do |category| %>
-                <option value=""><%=category%></option>
+                <option value=""><%= category %></option>
               <% end %>
             </select>
+            <br>
             <input type="text" name="app[category]" id="type_category" placeholder="Custom category" class="form-control">
           </div>
   </div>
-
+        <div class="col-md-6">
+          <div class="form-group"><br>
        <%= f.submit"Send Application", class: "btn btn-primary"%>
+     </div>
+   </div>
 
   </div>
 
