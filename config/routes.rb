@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :apps
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+   resources :apps
 
   get 'new', to: 'apps#new'
   get 'delete', to: 'apps#delete'
@@ -10,6 +11,14 @@ Rails.application.routes.draw do
   root to: 'apps#new'
 
   get 'apps/create'
+
+
+
+
+
+
+
+
 
 
 

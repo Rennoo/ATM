@@ -1,60 +1,106 @@
-<h2> Application successfully sent </h2>
+<div class="container panel show" id="homePage">
+  <div class="row">
+    <div class="col-md-9 col-md-offset-1">
+      <br>
+      <h3><%= @app.first_name%>&nbsp<%= @app.last_name %></h3>
+        <br>
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>First name:</strong>
+            <%= @app.first_name %>
+          </div>
+        </div>
 
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>Last name:</strong>
+            <%= @app.last_name %>
+          </div>
+        </div>
 
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>Mother's first name:</strong>
+            <%= @app.mother_first_name %>
+          </div>
+        </div>
 
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>Mother's last name:</strong>
+            <%= @app.mother_last_name %>
+          </div>
+        </div>
 
-first name:
-<%= @app.fname %>
-<br>
-lastname:
-<%= @app.lname %>
-<br>
-<br>
-mother's first name:
-<%= @app.fmother %>
-<br>
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>Nationality:</strong>
+            <%= @app.nationality %>
+          </div>
+        </div>
 
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>Phone number:</strong>
+            <%= @app.phone %>
+          </div>
+        </div>
 
-<br>
-mother's last name:
-<%= @app.lmother %>
-<br>
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>Email:</strong>
+            <%= @app.email %>
+          </div>
+        </div>
 
-<br>
-nationality:
-<%= @app.nationality %>
-<br>
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>Category:</strong>
+            <%= @app.category %>
+          </div>
+        </div>
 
-<br>
-phone number
-<%= @app.phone %>
-<br>
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>Date of birth:</strong>
+            <%= @app.date_of_birth %>
+          </div>
+        </div>
 
-<br>
-email:
-<%= @app.email %>
-<br>
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>Gender:</strong>
+            <%= @app.gender %>
+          </div>
+        </div>
 
-<br>
-education:
-<%= @app.education %>
-<br>
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>Address:</strong>
+            <%= @app.address %>
+          </div>
+        </div>
+              <div class="col-md-6">
+          <div class="form-group">
+            <strong>Education:</strong>
+            <%= @app.education %>
+          </div>
+        </div>
 
-<br>
-skills:
-<%= @app.skills %>
-<br>
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>Skills:</strong>
+            <%= @app.skills %>
+          </div>
+        </div>
 
-<br>
-category:
-<%= @app.category %><br>
-
-<br>
-date:
-<%= @app.dob.to_formatted_s(:long_ordinal) %><br>
-
-gender:
-<%= @app.gender %></br>
-
-
-<%= link_to 'New App ', new_app_path %>
+        <div class="col-md-6">
+          <div class="form-group">
+            <strong>Experience:</strong>
+            <%= @app.experience %>
+          </div>
+        </div>
+       <%= link_to 'Done!', new_app_path %>
+    </div>
+  </div>
+</div>

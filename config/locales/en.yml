@@ -20,4 +20,21 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+ activerecord:
+    attributes:
+      app:
+        mother_first_name: "Mother's first name"
+        mother_last_name: "Mother's last name"
+        phone: "Phone number"
+        father: "Father's name"
+errors:
+      models:
+        app:
+          attributes:
+            mother_first_name:
+              blank: "can't' be blank"
+              mother_last_name:
+              blank: "can't be blank"
+
+
+

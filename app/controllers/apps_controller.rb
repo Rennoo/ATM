@@ -1,5 +1,6 @@
 class AppsController < ApplicationController
 
+
   def show
     @app = App.find(params[:id])
   end
@@ -12,8 +13,11 @@ class AppsController < ApplicationController
 
      @app = App.new(app_params)
 
-     @app.save
-       redirect_to @app
+     if @app.save
+       redirect_to app_path(@app)
+     else
+      render :new
+    end
   end
 
   def destroy
@@ -27,7 +31,7 @@ class AppsController < ApplicationController
 
   def app_params
 
-    params.require(:app).permit(:fname, :lname, :father, :fmother, :lmother, :dob, :email, :phone, :gender, :category, :education, :nationality, :skills, :working)
+    params.require(:app).permit(:experience, :first_name, :last_name, :father, :mother_first_name, :mother_last_name, :date_of_birth, :email, :address, :phone, :gender, :category, :education, :nationality, :skills, :working)
   end
 
 end

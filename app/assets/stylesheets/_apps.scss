@@ -1,17 +1,18 @@
 
 #homePage{
-  background-color: #EEEEEE;
+  background-color: #F5F5F5;
+
   padding-bottom: 50px;
   border-radius: 10px;
-  margin-botton:20px;
-  //width: 800px;
+  margin-bottom:20px;
+  width: 925px;
   // //display: flex;
   // justify-content: space-around;
   // align-items: center;
-  // //height: 100vh;
+  // //
   // margin-top: 20px;
   // border: none !important;
-  // box-shadow: 1px 1px 3px #E4E4E4;
+  box-shadow: 3px 3px 3px #E4E4E4;
 
 }
 
@@ -21,7 +22,25 @@ input::-webkit-calendar-picker-indicator{
 }
 
 .container{
-  h2{
+  margin-right: auto;
+  margin-left: auto;
+  h3,h4{
     text-align:center;
   }
 }
+
+
+.panel {
+    margin-top: 20px;
+    border: none !important;
+
+}
+
+.show{
+  font-size:18px;
+  height: 100vh;
+}
+
+#cap{
+    text-transform:capitalize;
+ }

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ExperienceTest < ActiveSupport::TestCase
+class ExpsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end
