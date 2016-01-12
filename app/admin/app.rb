@@ -13,6 +13,8 @@ ActiveAdmin.register App do
 #   permitted
 # end
 index do
+  selectable_column
+  column :title
   column "First name", :first_name
   column "Last name", :last_name
   column :nationality
